@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Library</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="images/cthulhu.png">
+        
+    </head>
+    <body id=body>
+        <header>
+            <div id=headerDiv>
+                <h1 id=h1>The Library of Elderich Books</h1>
+                <button id="addBtn" onclick="addBtnClick()">Insert a new tome</button>
+                <br>
+                <button id="enterBtn" onclick="enterBtnClick()">Enter at your own peril</button>
+            </div>
+        </header>
+
+        <div id=inputDiv>
+            <form id="addBookForm" name="myform">
+                <h3>Which unholy tome do you wish to submit?</h3>
+                <br>
+                <label id="titleLabel" for="title">Title:</label> <br>
+                <input type="text" id="title" name="title1"> 
+                <br>
+                <label id="authorLabel" for="author">Creator:</label><br>
+                <input type="text" id="author" name="author"> 
+                <br>
+                <label id="pagesLabel" for="pages">Sum of Pages:</label><br>
+                <input type="number" id="pages" name="pages" min="0000" max="9999">
+                <br>
+                <label id="yearLabel" for="year">Year of Origin:</label><br>
+                <input type="number" id="year" name="year" min="0000" max="2021">
+                <br>
+                <label id="readlabel" for="read">Have you consumed the knowledge inside?</label><br>
+                <input type="checkbox" id="read" name="read">
+                <br>
+                <button id="submitBook" name="submit" type="submit">Submit</button>
+            </form>
+        </div>
+
+        <div id="wrapperDiv">
+            <table id="table">
+                <thead>
+                    <th class=titleTh>Title:</th>
+                    <th class=authorTh>Creator:</th>
+                    <th class=pagesTh>Pages:</th>
+                    <th class=yearTh>Year:</th>
+                    <th class=readTh>Consumed:</th>
+                    <th class=editTh>Edit:</th>
+                </thead>
+                <tbody id="tbody">
+                    <tr>
+                        <td>Javascript Sematary</td>   
+                        <td>Stephen King</td>  
+                        <td>216</td>  
+                        <td>2002</td>  
+                        <td>Nay</td>  
+                        <td><button class=deleteBtn onclick=remove(this.parentElement)>Destroy</button></td>
+                    </tr>
+                    <tr>
+                        <td>The Call of CthulhOOP</td>   
+                        <td>H.P. Lovecraft</td>  
+                        <td>314</td>  
+                        <td>1923</td>  
+                        <td>Aye</td>  
+                        <td><button class=deleteBtn onclick=remove(this.parentElement)>Destroy</button></td>
+                    </tr>
+                    <tr>
+                        <td>Frankenscript</td>   
+                        <td>Mary Shelley</td>  
+                        <td>224</td>  
+                        <td>1833</td>  
+                        <td>Aye</td>  
+                        <td><button class=deleteBtn onclick=remove(this.parentElement)>Destroy</button></td>
+                    </tr>     
+                    <!--add with javascript-->
+                </tbody>
+            </table>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+    
+</html>
